@@ -1,0 +1,25 @@
+line_1	English
+line_2	Meanwhile, it is said, again a guest came to Sultan Mahmud.
+line_3	When his guest arrived, what did the guest do?
+line_4	He had a little quantity of mud with him;
+line_5	he had an apple with him;
+line_6	and he had a pomegranate with him.
+line_7	He had put the apple beside himself
+line_8	and had put the heap of the mud in front of himself,
+line_9	and had put the pomegranate in front of himself.
+line_10	All three.
+line_11	No matter how much they would say “What do you have to do with this pomegranate, and what do you have to do with this apple;
+line_12	what business are you up to and why have you come?”
+line_13	It was not clear to anybody.
+line_14	Heyas said: “I am thinking of some person, he is a weaver.
+line_15	He is very wise.
+line_16	Let me go (and) ask that person.”
+line_17	Well, he got up (and) went to the weaver.
+line_18	He said: “O weaver, a guest has come to us in this state and in this shape.
+line_19	And we do not know why he has come.”
+line_20	He said: “Well, how come you do not know? You do not know?”
+line_21	He said: “No, by God, we do not know.”
+line_22	He has a little quantity of mud with him in a bag,
+line_23	he has an apple, and he has a pomegranate too.
+line_24	He said: “This (man) says that the king has a daughter.
+line_25	If he does not give me that girl, I shall take his soil in bags.

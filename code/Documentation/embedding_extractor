@@ -1,0 +1,34 @@
+Description  
+
+The embedding_extractor.py script generates fixed-size vector representations (embeddings) for sentences using pre-trained transformer models like XLM-RoBERTa. 
+Usage  
+python embedding_extractor.py -i input.txt -o embeddings.txt --model xlm-roberta-base
+Arguments  
+
+    -i, --input_file: Path to the input file containing sentences.
+    -o, --output_file: Path to save the embeddings.
+    --model: Pre-trained model name (default: xlm-roberta-base).
+    --layer: Layer index for embedding extraction (default: 8).
+     
+
+Input Format  
+
+Each line in the input file should contain: 
+ID<TAB>Sentence
+JA.01	dew wānēkey dā kutī...
+
+Output Format  
+
+The output file follows the FastText format: 
+ 
+2 768
+JA.01 0.123456 0.234567 ...
+
+Dependencies  
+
+    transformers
+    torch
+     
+
+Example  
+python embedding_extractor.py -i data/input.txt -o data/embeddings.txt --model xlm-roberta-base

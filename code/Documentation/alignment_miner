@@ -1,0 +1,47 @@
+Description  
+
+The alignment_miner.sh script performs the following tasks: 
+
+    Generates document-level embeddings for source and target languages.
+    Finds nearest neighbors between embeddings using CSLS.
+    Filters alignments based on confidence thresholds.
+    Evaluates the quality of alignments using F-scores.
+     
+
+Usage  
+./alignment_miner.sh -s ku -t en -d /path/to/data -e /path/to/embeddings -o /path/to/output
+
+Arguments  
+
+    -s, --source_lang: Source language code (e.g., ku for Kurdish).
+    -t, --target_lang: Target language code (e.g., en for English).
+    -d, --data_dir: Path to the dataset directory.
+    -e, --embeddings_dir: Path to store document embeddings.
+    -o, --output_dir: Path to save results.
+     
+
+Workflow  
+
+    Embedding Generation :
+        Extracts embeddings for source and target languages using embedding_extractor.py.
+         
+    Nearest Neighbor Search :
+        Computes nearest neighbors between embeddings using bilingual_nearest_neighbor.py.
+         
+    Filtering :
+        Filters alignments based on a confidence threshold using filter.py.
+         
+    Evaluation :
+        Evaluates alignment quality using bucc_f-score.py.
+         
+     
+
+Dependencies  
+
+    sentence-transformers
+    torch
+    numpy
+     
+
+Example  
+./alignment_miner.sh -s ku -t en -d data/ -e embeddings/ -o results/

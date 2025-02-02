@@ -1,0 +1,201 @@
+Documentation  
+(A) sentence_aligner.py  
+Description  
+
+The sentence_aligner.py script aligns sentences between two languages (e.g., Kurdish and English) using word-level alignments. It computes alignment coverage metrics based on token indices and character lengths. 
+Usage:
+python sentence_aligner.py -i input.txt -o output.txt --languages ku en  
+
+Arguments  
+
+    -i, --input_file: Path to the input file containing bilingual sentence pairs.
+    -o, --output_file: Path to save the alignment results.
+    --languages: List of languages to align (e.g., ku en).
+     
+
+Input Format  
+
+Each line in the input file should contain: 
+ID<TAB>Language1<TAB>Language2
+JA.01	dew wānēkey dā kutī...	Meanwhile, it is said...
+
+Output Format  
+
+Each line in the output file contains: 
+
+Dependencies  
+
+    simalign
+    torch
+    transformers
+     
+
+Example:
+python sentence_aligner.py -i data/input.txt -o data/output.txt --languages ku en
+
+
+
+
+
+
+##Full documentation
+
+# Sentence Aligner
+
+## Overview
+The `sentence_aligner.py` script aligns sentences between two languages using word-level alignments. It computes alignment coverage metrics based on token indices and character lengths.
+
+## Installation
+Install required dependencies:
+```bash
+pip install simalign torch transformers
+
+Usage
+python sentence_aligner.py -i input.txt -o output.txt --languages ku en
+
+Arguments 
+
+    -i, --input_file: Path to the input file containing bilingual sentence pairs.
+    -o, --output_file: Path to save the alignment results.
+    --languages: List of languages to align (e.g., ku en).
+     
+
+Input Format 
+
+Each line in the input file should contain: 
+
+ID<TAB>Language1<TAB>Language2
+JA.01	dew wānēkey dā kutī...	Meanwhile, it is said...
+
+Output Format 
+
+Each line in the output file contains: 
+ID<TAB>AlignmentRate
+JA.01	0.750000
+
+Example
+python sentence_aligner.py -i data/input.txt -o data/output.txt --languages ku en
+
+Dependencies 
+
+    simalign
+    torch
+    transformers
+     
+
+
+---
+
+#### **(B) `embedding_extractor.py`**
+
+```markdown
+# Embedding Extractor
+
+## Overview
+The `embedding_extractor.py` script generates sentence embeddings using pre-trained transformer models like XLM-RoBERTa. The embeddings are saved in the FastText format.
+
+## Installation
+Install required dependencies:
+```bash
+pip install transformers torch
+
+Usage
+python embedding_extractor.py -i input.txt -o embeddings.txt --model xlm-roberta-base
+
+
+Arguments 
+
+    -i, --input_file: Path to the input file containing sentences.
+    -o, --output_file: Path to save the embeddings.
+    --model: Pre-trained model name (default: xlm-roberta-base).
+    --layer: Layer index for embedding extraction (default: 8).
+     
+
+Input Format 
+
+Each line in the input file should contain: 
+
+ID<TAB>Sentence
+JA.01	dew wānēkey dā kutī...
+
+Output Format 
+
+The output file follows the FastText format: 
+
+2 768
+JA.01 0.123456 0.234567 ...
+
+Example 
+python embedding_extractor.py -i data/input.txt -o data/embeddings.txt --model xlm-roberta-base
+Dependencies 
+
+    transformers
+    torch
+     
+
+
+---
+
+#### **(C) `alignment_miner.sh`**
+
+```markdown
+# Alignment Miner
+
+## Overview
+The `alignment_miner.sh` script performs the following tasks:
+1. Generates document-level embeddings for source and target languages.
+2. Finds nearest neighbors between embeddings using CSLS.
+3. Filters alignments based on confidence thresholds.
+4. Evaluates alignment quality using F-scores.
+
+## Installation
+Install required dependencies:
+```bash
+pip install sentence-transformers torch numpy
+
+
+Usage
+./alignment_miner.sh -s ku -t en -d /path/to/data -e /path/to/embeddings -o /path/to/output
+
+
+Arguments 
+
+    -s, --source_lang: Source language code (e.g., ku for Kurdish).
+    -t, --target_lang: Target language code (e.g., en for English).
+    -d, --data_dir: Path to the dataset directory.
+    -e, --embeddings_dir: Path to store document embeddings.
+    -o, --output_dir: Path to save results.
+     
+
+Workflow 
+
+    Embedding Generation :
+        Extracts embeddings for source and target languages using embedding_extractor.py.
+         
+    Nearest Neighbor Search :
+        Computes nearest neighbors between embeddings using bilingual_nearest_neighbor.py.
+         
+    Filtering :
+        Filters alignments based on a confidence threshold using filter.py.
+         
+    Evaluation :
+        Evaluates alignment quality using bucc_f-score.py.
+         
+     
+
+Example 
+./alignment_miner.sh -s ku -t en -d data/ -e embeddings/ -o results/
+
+
+Dependencies 
+
+    sentence-transformers
+    torch
+    numpy
+
+
+---
+
+### **4. Summary**
+
+Each script has been given a unique and descriptive name, and detailed documentation has been provided for clarity and usability. This ensures that users can easily understand and utilize your tools for bilingual/multilingual sentence alignment. Let me know if you need further assistance!

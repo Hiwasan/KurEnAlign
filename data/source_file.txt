@@ -1,0 +1,25 @@
+line_1	Mukri
+line_2	dew wānēkey dā kutī dūbāre mīwānēkī hāt sułtān meħmūd
+line_3	ege mīwāney hāt mīwāne čīy kird?
+line_4	nextēkī gił pē bū
+line_5	sēwēkī pē bū
+line_6	henārēkīšī pē bū
+line_7	sēwekey le kin xoy dānābū
+line_8	kogiłekešī le pēšē xoy dānābū
+line_9	henārekešī le pēšē xoy dānābū
+line_10	hersēkyān
+line_11	herčend deyānkut eto ew henāret bo čīye w ew sēwet bo čīye
+line_12	či kārēkit heye w bo či hātūwī
+line_13	hīč kes boy meʕlūm nebū
+line_14	ħeyās kutī fiłāne kesēkim pē šik dē jołāye
+line_15	zor āqilmende
+line_16	bā bičim emin lew kābrāyey bipirsim
+line_17	bełē hestā čo kin jołāy
+line_18	kutī jołā eme mīwānēkmān hātūwe lew ħāłey lew řengey
+line_19	nāšzānīn bo čī hātūwe
+line_20	kutī jā āxir čon nāzānī? nāzānin?
+line_21	kutī ne wiłłā nāzānīn
+line_22	{# ko} nextēkī gił pēye de tūrekeyēkī dā
+line_23	sēwēkī pēye henārēkīšī pēye
+line_24	kutī ewe dełē pādšā kičēkī heye
+line_25	ege ew kičem nedātē xākī be tūrekān debem
